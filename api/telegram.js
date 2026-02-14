@@ -52,7 +52,7 @@ async function getUserTransactions(userId, start, end) {
     query = query.where(
       "createdAt",
       "<",
-      admin.firestore.Timestamp.fromDate(end)
+      Timestamp.fromDate(end)
     );
   }
 
