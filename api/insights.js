@@ -13,7 +13,7 @@ function verifyWebToken(token) {
 
   if (sig !== expectedSig) return null;
 
-  return JSON.parse(Buffer.from(base, "base64").toString());
+  return JSON.parse(Buffer.from(base, "base64url").toString());
 }
 
 export default async function handler(req, res) {
